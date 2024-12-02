@@ -24,6 +24,8 @@ public:
     ~Song();
 
     void display() const;
+
+    friend std::istream& operator>>(std::istream& in, Song& song);
 };
 
 #endif

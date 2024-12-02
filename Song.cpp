@@ -29,3 +29,35 @@ void Song::display() const {
               << "Release Year: " << releaseYear << "\n"
               << "Duration: " << duration << " minutes\n";
 }
+
+std::istream& operator>>(std::istream& in, Song& song) { 
+    std::cout << "Enter Song ID: ";
+    in >> song.id;
+    in.ignore();
+
+    std::cout << "Enter Title: ";
+    std::getline(in, song.title);
+
+    std::cout << "Enter Artist: ";
+    std::getline(in, song.artist);
+
+    std::cout << "Enter Album: ";
+    std::getline(in, song.album);
+
+    std::cout << "Enter Genre: ";
+    std::getline(in, song.genre);
+
+    std::cout << "Enter Lyricist: ";
+    std::getline(in, song.lyricist);
+
+    std::cout << "Enter Language: ";
+    std::getline(in, song.language);
+
+    std::cout << "Enter Release Year: ";
+    in >> song.releaseYear;
+
+    std::cout << "Enter Duration: ";
+    in >> song.duration;
+
+    return in;
+}
