@@ -61,3 +61,17 @@ std::istream& operator>>(std::istream& in, Song& song) {
 
     return in;
 }
+
+std::ostream& operator<<(std::ostream& out, const Song& song) {
+    out << "Song Details:\n"
+        << "ID: " << song.id << "\n"
+        << "Title: " << song.title << "\n"
+        << "Artist: " << song.artist << "\n"
+        << "Album: " << song.album << "\n"
+        << "Genre: " << song.genre << "\n"
+        << "Lyricist: " << song.lyricist << "\n"
+        << "Language: " << song.language << "\n"
+        << "Release Year: " << song.releaseYear << "\n"
+        << "Duration: " << song.duration << " minutes\n";
+    return out;
+}

@@ -26,6 +26,8 @@ public:
     void display() const;
 
     friend std::istream& operator>>(std::istream& in, Song& song);
+
+    friend std::ostream& operator<<(std::ostream& out, const Song& song);
 };
 
 #endif
